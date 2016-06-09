@@ -1,7 +1,7 @@
 
 import Data.Char
 
-calculate :: [String] -> Int
+calculate :: [String] -> Double
 calculate [] = 0
 calculate (x:[]) = read x
 calculate (x:xs)
@@ -30,15 +30,15 @@ timesLastTwo xs =
 divisionLastTwo :: [String] -> String
 divisionLastTwo xs =
   show $
-  (div) (takeFirst xs) (takeSecond xs)
+  (/) (takeFirst xs) (takeSecond xs)
 
 dropLastTwo :: [String] -> [String]
 dropLastTwo xs = reverse $ drop 2 $ reverse xs
 
-takeFirst :: [String] -> Int
+takeFirst :: [String] -> Double
 takeFirst xs = read $ head $ take 1 $ reverse xs
 
-takeSecond :: [String] -> Int
+takeSecond :: [String] -> Double
 takeSecond xs = read $ head $ reverse $ take 2 $ reverse xs
 
 isValidNumber :: String -> Bool
