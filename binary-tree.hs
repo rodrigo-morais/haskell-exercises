@@ -1,4 +1,18 @@
 {-# LANGUAGE DatatypeContexts #-}
+
+module BST
+( build
+, build2
+, build3
+, insert
+, find
+, findSub
+, contains
+, size
+, height
+, delete
+) where
+
 data (Ord a, Eq a) => Tree a = Empty | Node a (Tree a) (Tree a)
   deriving Show
 
