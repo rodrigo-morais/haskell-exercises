@@ -1,7 +1,8 @@
 {-# LANGUAGE DatatypeContexts #-}
 
 module BST
-( build
+( Tree(..)
+, build
 , build2
 , build3
 , insert
